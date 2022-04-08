@@ -1,28 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- 插槽demo -->
+    <!-- <slot-demo>
+      <template #default>默认插槽赋值</template>
+      <br />
+      <template #nameslot>name插槽赋值</template>
+      <br />
+      <template #scope="scopedata">scope插槽{{ scopedata.data }}</template>
+    </slot-demo> -->
+    <element-demo></element-demo>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import SlotDemo from './components/slot-demo.vue'
+import ElementDemo from './components/elementui-demo.vue'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { SlotDemo, ElementDemo },
 }
 </script>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="less"></style>
